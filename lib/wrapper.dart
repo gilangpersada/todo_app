@@ -9,7 +9,7 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     User firebaseUser = Provider.of<User>(context);
-    AuthService.signOut();
+
     if (firebaseUser == null) {
       return LoginPage();
     } else {
