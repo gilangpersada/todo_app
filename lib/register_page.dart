@@ -37,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               TextField(
-                controller: emailController,
+                controller: passwordController,
                 decoration: InputDecoration(
                   labelText: 'Password',
                   hintText: 'password',
