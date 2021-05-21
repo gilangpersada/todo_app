@@ -45,10 +45,10 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               TextButton(
                   onPressed: () async {
-                    await AuthService.signUp(
+                    var user_id = await AuthService.signUp(
                         emailController.text, passwordController.text);
 
-                    await user.add({
+                    await user.doc(user_id.uid).set({
                       'username': usernameController.text,
                       'email': emailController.text,
                       'password': passwordController.text,
