@@ -20,7 +20,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return StreamProvider.value(
       value: AuthService.firebaseUserStream,
-      child: Wrapper(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Wrapper(),
+      ),
     );
   }
 }
